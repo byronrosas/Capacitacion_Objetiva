@@ -166,17 +166,17 @@ body {
         padding: 5px;
         position: fixed;
     }
-    .fixed-button { left: 90%; }
+    .fixed-button { left: 93%; }
 }
 @media only screen and (max-width: 900px){ .fixed-button { left: 89%; }}
 @media only screen and (max-width: 700px){ .fixed-button { left: 85%; }}
 @media only screen and (max-width: 600px){ .fixed-button { left: 83%; }}
 @media only screen and (max-width: 550px){ .fixed-button { left: 82%; }}
 @media only screen and (max-width: 530px){ .fixed-button { left: 87%; }}
-@media only screen and (max-width: 530px){ .fixed-button { left: 87%; }}
 @media only screen and (max-width: 400px){ .fixed-button { left: 84%; }}
 @media only screen and (max-width: 350px){ .fixed-button { left: 81%; }}
 @media only screen and (max-width: 660px){ .fixed-button { bottom: 25px; }}
+@media only screen and (max-width: 530px){ .fixed-button { bottom: 10px; }}
 @media only screen and (max-width: 355px){ .fixed-button { bottom: 35px; }}
 .green-hover:hover {
 	background-color: #a2d8a7;
@@ -189,6 +189,13 @@ body {
     box-shadow: inset 0px 0px 65px -15px rgba(0,0,0,0.76);
 }
 /*-------------tabs--------------*/ 
+
+/*-------------modal----------------*/
+.btn-flat {
+  display: flex;
+  align-items: center;
+}
+/*-------------modal----------------*/
 /*footer*/
 .main-footer{
 	  width: 100%;

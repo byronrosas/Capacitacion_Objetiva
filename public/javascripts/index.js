@@ -2,6 +2,9 @@ $(function(){
     // inicializacion de TABS
     $('ul.tabs').tabs();
   // Fin de tabs
+  // inicializacion de MODALS
+    $('.modal').modal();
+  // Fin de modals
         var window_width = $(window).width();
         $(window).load(function() {
             setTimeout(function() {
