@@ -12,12 +12,15 @@ export default class Modificar extends React.Component {
         const name_div = data[0];
         const div_ref = data[1];
         const title = data[2];
-        const Modificar= ['Modificar', 'btn btn-flat waves-effect waves-light green darken-4 white-text', 'save'];
-        const Regresar= ['Regresar', 'modal-action modal-close waves-effect waves-green btn-flat', 'reply'];
+        const Modificar = ['Modificar', 'btn btn-flat waves-effect waves-light green darken-4 white-text', 'save'];
+        const Regresar = ['Regresar', 'modal-action modal-close waves-effect waves-green btn-flat', 'reply'];
         return (
             <div>
+                <a href='#'className="secondary-content">
+                    <i className="material-icons">delete</i>
+                </a>
                 <a href={div_ref} className="secondary-content">
-                    <i className="material-icons">create</i>
+                    <i className="material-icons">edit</i>
                 </a>
                 <div id={name_div} className="modal modal-fixed-footer">
                     <div className="modal-content">

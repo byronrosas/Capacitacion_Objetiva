@@ -12,8 +12,8 @@ export default class Crear extends React.Component {
         const name_div = data[0];
         const div_ref = data[1];
         const title = data[2];
-        const Guardar= ['Guardar', 'btn btn-flat waves-effect waves-light green darken-4 white-text', 'save'];
-        const Regresar= ['Regresar', 'modal-action modal-close waves-effect waves-green btn-flat', 'reply'];
+        const Guardar = ['Guardar', 'btn btn-flat waves-effect waves-light green darken-4 white-text', 'save'];
+        const Regresar = ['Regresar', 'modal-action modal-close waves-effect waves-green btn-flat', 'reply'];
         return (
             <div id={name_div} className="modal modal-fixed-footer">
                 <div className="modal-content">

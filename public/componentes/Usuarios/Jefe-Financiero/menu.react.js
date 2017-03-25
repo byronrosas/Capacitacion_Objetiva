@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Perfil from '../../body/perfil/body.react';
+import Contratos from './tabs/contratos.react';
 import Cursos from './tabs/cursos.react';
 import Proveedores from './tabs/proveedores.react';
 
@@ -11,6 +12,8 @@ export default class Menu_Tabs extends React.Component {
                 <div className="col s12 green darken-4">
                     <ul className="tabs green darken-4">
                         <li className="tab col s3"><a href="#perfil">Perfil</a></li>
+                        <li className="tab col s3"><a href="#contratos">Contratos</a></li>
+                        <li className="tab col s3"><a href="#detalle_curso">Aprobar Cursos</a></li>
                         <li className="tab col s3"><a href="#cursos">Cursos</a></li>
                         <li className="tab col s3"><a href="#proveedores">Proveedores</a></li>
                     </ul>
@@ -18,6 +21,12 @@ export default class Menu_Tabs extends React.Component {
                 <div id="perfil" className="col s12">
                     <Perfil />
                 </div>
+                <div id="contratos" className="col s12">
+                    <Contratos />
+                </div>
+                {/*<div id="detalle_curso" className="col s12">
+                    <Detalle_Curso />
+                </div>*/}
                 <div id="cursos" className="col s12">
                     <Cursos />
                 </div>
@@ -28,12 +37,11 @@ export default class Menu_Tabs extends React.Component {
         );
     }
 }
-// Accesos:
-// R(18): Ver perfil de jefe de rediseño.  -----completado
-// R(19): Ver lista de proveedores.  -----completado
-// R(20): Crear proveedores.  -----completado
-// R(21): Ver y crear nuevos cursos.  -----completado
-// R(22): Crear destrezas para cada uno de los cursos. Estas son destrezas requeridas y destrezas adquiridas con el mismo.
+
+// R(34): Ver lista de proveedores.  -----completado
+// R(35): Ver lista de cursos.  -----completado
+// R(36): Ver y aprobar el detalle de curso, y subir un documento que valide dicha aprobación.  
+// R(37): Ver y aprobar Contrato (Docente-Curso)  -----completado
 // Restricciones:
-// R(23):No puede modificar su número de cédula aunque este sea visible.
-// R(24):Pasado el tiempo de crear proveedores y cursos. Estas ventanas solo serán de lectura
+// R(38): No puede modificar su número de cédula aunque este sea visible.  
+// R(39): Solo podrá acceder a crear detalles si y solo si cursos y proveedores fueron publicados.  
