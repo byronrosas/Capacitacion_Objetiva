@@ -5,14 +5,14 @@ import Crear from '../modals/crear.react';
 
 export default class Cursos extends React.Component {
     render() {
-        let crear_curso_modal = ['crear_curso', '#crear_curso','Curso'];
-        let modificar_curso_modal = ['modificar_curso', '#modificar_curso','Curso'];
+        let crear_curso_modal = ['crear_curso_JR', '#crear_curso_JR','Curso'];
+        let modificar_curso_modal = ['modificar_curso_JR', '#modificar_curso_JR','Curso'];
         return (
             <div className="row coleccion">
                 <div className="col s1 m2 l2"></div>
                 <div className="col s10 m8 l8">
                     {/*<ul></ul> crea la lista de elementos, cada elemento es un <li></li>*/}
-                    <ul id="listar_cursos" className="collection with-header">
+                    <ul id="listar_cursos_JR" className="collection with-header">
                         {/*en esta parte se debe hace la llamada a la DB para mostrar los datos*/}
                         <Coleccion data={modificar_curso_modal} />
                         <Coleccion data={modificar_curso_modal} />

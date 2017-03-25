@@ -5,14 +5,14 @@ import Crear from '../modals/crear.react';
 
 export default class Proveedores extends React.Component {
     render() {
-        let crear_proveedor_modal = ['crear_proveedor', '#crear_proveedor','Proveedor'];
-        let modificar_proveedor_modal = ['modificar_proveedor', '#modificar_proveedor','Proveedor'];
+        let crear_proveedor_modal = ['crear_proveedor_JR', '#crear_proveedor_JR','Proveedor'];
+        let modificar_proveedor_modal = ['modificar_proveedor_JR', '#modificar_proveedor_JR','Proveedor'];
         return (
             <div className="row coleccion">
                 <div className="col s1 m2 l2"></div>
                 <div className="col s10 m8 l8">
                     {/*<ul></ul> crea la lista de elementos, cada elemento es un <li></li>*/}
-                    <ul id="listar_proveedores" className="collection with-header">
+                    <ul id="listar_proveedores_JR" className="collection with-header">
                         {/*en esta parte se debe hace la llamada a la DB para mostrar los datos*/}
                         <Coleccion data={modificar_proveedor_modal} />
                         <Coleccion data={modificar_proveedor_modal} />

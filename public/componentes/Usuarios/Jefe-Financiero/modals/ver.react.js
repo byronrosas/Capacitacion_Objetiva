@@ -33,7 +33,7 @@ export default class Ver extends React.Component {
                         </div>
                         <br/>
                         <div className='center'>
-                            <p> El siguiente boton le redirigira a una pagina externa donde se podrá visualizar el contrato.</p>
+                            <p> El siguiente botón le redirigirá a una página externa donde se podrá visualizar el contrato.</p>
                             <p> Una vez revisado dicho documento usted podrá decidir si aprueba o no el contrado.</p>
                         </div>
                     </div>
