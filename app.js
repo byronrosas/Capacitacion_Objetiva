@@ -10,49 +10,36 @@
   // /  ,-' \  \            |       	 D			        |
  //  \  \    `-'            |                          |
  //   `-'                   '--------------------------'
-
-
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
-//
 var express = require("express");
 var bodyParser = require("body-parser");
 var jwt = require('jsonwebtoken');
-const User=require('./modelos/modelo.Usuario.js');
 var passport = require("passport");
-// var passportJWT = require("passport-jwt");
-
-//
 var mongoose=require('mongoose');
-var inicio = require('./routes/ruta.Inicio');
-var configDB=require('./config/db.js');
 var cors=require('cors');
-
+// var passportJWT = require("passport-jwt");
+var configDB=require('./config/db.js');
 // const JwtStrategy=require('passport-jwt').Strategy;
 // const ExtractJwt=require('passport-jwt').ExtractJwt;
+//modelos
+const User=require('./modelos/modelo.Usuario.js');
 //ROUTES
+var inicio = require('./routes/ruta.Inicio');
 var rutaDetalleCurso = require('./routes/ruta.Detalle.Curso.js');
 var users = require('./routes/ruta.Usuario.js');
-//ruta proveedor_disney
-var proveedor = require('./routes/ruta.Proveedor');
-//ruta curso_mauro
-var curso = require('./routes/ruta.Curso');
-//ruta periodo_Darwin
-var periodo = require('./routes/ruta.Periodo');//ruta de periodo
-//ruta periodo_Riki
-var carrera = require('./routes/ruta.Carrera');
-//ruta titulo
-var titulo = require('./routes/ruta.Titulo');
+var proveedor = require('./routes/ruta.Proveedor'); //ruta proveedor_disney
+var curso = require('./routes/ruta.Curso'); //ruta curso_mauro
+var periodo = require('./routes/ruta.Periodo'); //ruta periodo_Darwin
+var carrera = require('./routes/ruta.Carrera'); //ruta periodo_Riki
+var titulo = require('./routes/ruta.Titulo'); //ruta titulo_Gonzalo
+var tiempo = require('./routes/ruta.Tiempo');   //ruta_tiempo_Jonathan
+var contrato = require('./routes/ruta.Contrato'); //ruta_contrato_Jonathan
 
 //PASSPORT middleware
-
-//rutas Darkness
-var tiempo = require('./routes/ruta.Tiempo');   //Darkness
-var contrato = require('./routes/ruta.Contrato'); //Darkness
-
 require('./config/passport')(passport);
 
 // var jwtOptions = {}
@@ -83,22 +70,21 @@ var app = express();
 mongoose.connect(configDB.uriDB);
 //on connection
 mongoose.connection.on('connected',()=>{
-  console.log('Connected to database '+configDB.uriDB);
+    console.log('Connected to database '+configDB.uriDB);
 });
 //on error
 mongoose.connection.on('error',(err)=>{
-  console.log('Database error: '+err);
+    console.log('Database error: '+err);
 });
-
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 //CORS middleware
 app.use(cors());
 
-
 app.use(passport.initialize());
 app.use(passport.session());
+
 // uncomment after placing your favicon in /public
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
@@ -107,44 +93,35 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-
-
-
-
 //RUTAS MIDDLEWARE
 app.use('/', inicio);
-app.use('/detalleCurso/', rutaDetalleCurso);
-app.use('/users', users);
-//disney  Proveedor
+app.use('/detalleCurso', rutaDetalleCurso);
 app.use('/proveedor', proveedor);
-app.use('/tiempo',tiempo); //darkness
-app.use('/contrato',contrato); //darkness
-//curso mauro
+app.use('/tiempo',tiempo); 
+app.use('/contrato',contrato); 
 app.use('/curso', curso);
-//periodo darwin
-app.use('/periodo/', periodo); 
-//carrera Riki
+app.use('/periodo', periodo); 
 app.use('/carrera',carrera);
-//titulo gonzalo
 app.use('/titulo',titulo);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  var err = new Error('Not Found');
-  err.status = 404;
-  next(err);
+    var err = new Error('Not Found');
+    err.status = 404;
+    next(err);
 });
 
 // error handler
 app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
-  console.log(err);
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
+    // set locals, only providing error in development
+    console.log(err);
+    res.locals.message = err.message;
+    res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error');
+    // render the error page
+    res.status(err.status || 500);
+    res.render('error');
 });
+
 
 module.exports = app;

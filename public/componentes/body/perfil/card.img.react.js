@@ -1,17 +1,19 @@
 import React from 'react';
+import $ from "jquery";
 
 export default class Card_Image extends React.Component {
-    constructor(props) {
-        super(props);
-        // this._handleClick = this._handleClick.bind(this);
+    constructor() {
+        super();
     }
-    // componentDidMount() {
-    //     this._handleClick();
-    // }
-    // _handleClick() {
-    //     $('#EditPerfil').removeClass("hide");
-    //     $('#EditPerfil').show('fast');
-    // }
+    onClick() {
+        $('#EditPerfil').removeClass("hide");
+        $('#EditPerfil').show('fast');
+        $('#ViewPerfil').addClass('animated fadeOut');
+        $('#ViewPerfil').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+            $('#EditPerfil').removeClass('animated fadeOut hide');
+            $('#ViewPerfil').hide('fast');
+        });
+    }
     render() {
         const Url_icono = 'images/icono-usuario.png';
         const Url_background_profile = 'images/user-profile-bg.jpg';
@@ -24,7 +26,7 @@ export default class Card_Image extends React.Component {
                         account_circle
                     </i>
                 </a>
-                <a className='btn-large btn-floating halfway-fab waves-effect waves-light darken-2'> {/*onClick={this._handleClick}>*/}
+                <a className='btn-large btn-floating halfway-fab waves-effect waves-light darken-2' onClick={this.onClick}>
                     <i className="material-icons">
                         edit
                     </i>

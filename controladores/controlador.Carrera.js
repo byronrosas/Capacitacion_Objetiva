@@ -1,4 +1,4 @@
-var mongoose = require ('mongoose');}
+var mongoose = require ('mongoose');
 
 var Carrera = require('../modelos/modelo.Carrera.js');
 

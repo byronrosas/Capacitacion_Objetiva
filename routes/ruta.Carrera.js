@@ -1,9 +1,11 @@
 var express = require('express');
+var router = express.Router();
 const passport = require('passport');
 const jwt = require('jsonwebtoken');
 const config = require('../config/db');
-var router = express.Router();
-var controladorCarrera = require("../controladores/controlador.Carrera.js")
+
+var controladorCarrera = require("../controladores/controlador.Carrera");
+
 
 
 router.post('/crear', passport.authenticate('jwt', { session: false }), (req,res,next) => {

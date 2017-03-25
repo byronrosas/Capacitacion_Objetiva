@@ -8,7 +8,7 @@ export default class Card_Reveal extends React.Component {
         super(props)
     }
     render() {
-        let TipoUsuario = [ 'tipoUsuario card-title responsive-text', 'Tipo de Usuario', 'material-icons right', 'cancel' ];
+        let TipoUsuario = [ 'tipoUsuario card-title responsive-text', 'Tipo de Usuario', 'green-text text-darken-4 material-icons right', 'cancel' ];
         let TipoRol = [ 'cyan-text text-darken-2', 'Tipo de Rol', 'icon material-icons left',  'person_outline' ];
         let Telefono = [ 'cyan-text text-darken-2', '+593 999999999', 'icon material-icons left', 'local_phone' ];
         let Email = [ 'cyan-text text-darken-2', 'mail@domain.com', 'icon material-icons left', 'mail' ];

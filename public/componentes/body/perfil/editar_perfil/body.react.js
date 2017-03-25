@@ -1,12 +1,23 @@
 import React from 'react';
+import $ from 'jquery';
 
 import Input_Edit from './input.edit.react';
 import Upload_Img from './image.edit.react';
-import Button_Edit from './button.edit.react';
 
 export default class Perfil_Edit extends React.Component {
     constructor(props) {
         super(props);
+    }
+    SaveChanges() {
+        // -------------Guarda cambios---------------
+        Materialize.toast('Cambios guardados correctamente', 3000);
+        // -------------Oculta el EditPerfil---------------
+        OcultarEditPerfil();
+    }
+    CancelChanges() {
+        // -------------Cancela los cambios---------------
+        // -------------Oculta el EditPerfil---------------
+        OcultarEditPerfil();
     }
     render() {
         let Nombres = [ 'txtNombres_Edit', 'Nombres', 'text', 'username' ];
@@ -16,8 +27,6 @@ export default class Perfil_Edit extends React.Component {
         let Telefono = [ 'txtTelefono_Edit', 'Teléfono', 'text', 'txtTelefono_Edit' ];
         let Direccion = [ 'txtDireccion_Edit', 'Dirección', 'text', 'txtDireccion_Edit' ];
         let Img = [ 'Imagen', 'img_Edit' ];
-        let buttonSave = [ 'btn-Save-Edit-Profile', 'SaveChanges()', 'btn waves-effect waves-light green white-text', 'Guardar'];
-        let buttonCancel = [ 'btn-Cancel-Edit-Profile', 'CancelChanges()', 'btn waves-effect waves-light red white-text', 'Cancelar'];
 
         return (
             <div>
@@ -37,11 +46,20 @@ export default class Perfil_Edit extends React.Component {
                     <Upload_Img picture={Img}/>
                     <br/>
                     <div className="card-action">
-                        <Button_Edit button={buttonSave}/>
-                        <Button_Edit button={buttonCancel}/>
+                        <a id='btn-Save-Edit-Profile' onClick={this.SaveChanges} className='btn waves-effect waves-light green white-text'>Guardar</a>
+                        <a id='btn-Cancel-Edit-Profile' onClick={this.CancelChanges} className='btn waves-effect waves-light red white-text'>Cancelar</a>
                     </div>
                 </form>
             </div>
         );
     }
+}
+
+function OcultarEditPerfil() {
+    $('#EditPerfil').addClass('animated fadeOut');
+    $('#EditPerfil').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
+        $('#EditPerfil').addClass("hide");
+        $('#ViewPerfil').removeClass('animated fadeOut');
+        $('#ViewPerfil').show('fast');
+    });
 }
