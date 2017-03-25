@@ -1,0 +1,78 @@
+/*css para el proyecto "Capacitacion Objetiva"*/
+body {
+  font: 14px "Lucida Grande", "Helvetica", "Arial", "sans-serif";
+}
+.row { margin-bottom: 0; }
+/*--------texto responsivo-------*/
+@media screen and (min-width: 900px){ .responsive-text { font-size: 24px; } }
+@media only screen and (max-width: 900px){ .responsive-text { font-size: 1.714rem; } }
+@media only screen and (max-width: 870px){ .responsive-text { font-size: 1.686rem; } }
+@media only screen and (max-width: 840px){ .responsive-text { font-size: 1.658rem; } }
+@media only screen and (max-width: 810px){ .responsive-text { font-size: 1.630rem; } }
+@media only screen and (max-width: 780px){ .responsive-text { font-size: 1.602rem; } }
+@media only screen and (max-width: 750px){ .responsive-text { font-size: 1.574rem; } }
+@media only screen and (max-width: 720px){ .responsive-text { font-size: 1.546rem; } }
+@media only screen and (max-width: 690px){ .responsive-text { font-size: 1.518rem; } }
+@media only screen and (max-width: 660px){ .responsive-text { font-size: 1.490rem; } }
+@media only screen and (max-width: 630px){ .responsive-text { font-size: 1.462rem; } }
+@media only screen and (max-width: 600px){ .responsive-text { font-size: 1.434rem; } }
+@media only screen and (max-width: 570px){ .responsive-text { font-size: 1.406rem; } }
+@media only screen and (max-width: 540px){ .responsive-text { font-size: 1.378rem; } }
+@media only screen and (max-width: 510px){ .responsive-text { font-size: 1.350rem; } }
+@media only screen and (max-width: 480px){ .responsive-text { font-size: 1.322rem; } }
+@media only screen and (max-width: 450px){ .responsive-text { font-size: 1.295rem; } }
+@media only screen and (max-width: 420px){ .responsive-text { font-size: 1.268rem; } }
+@media only screen and (max-width: 390px){ .responsive-text { font-size: 1.241rem; } }
+@media only screen and (max-width: 360px){ .responsive-text { font-size: 1.214rem; } }
+@media only screen and (max-width: 350px){ .responsive-text { font-size: 1rem; } }
+@media only screen and (max-width: 340px){ .responsive-text { font-size: 1rem; } }
+@media only screen and (max-width: 330px){ .responsive-text { font-size: 1rem; } }
+/*--------texto responsivo-------*/
+/*header*/
+.cabecera { padding-top: 5px; }
+.titulo{ 
+  font-family: 'Impact', 'Haettenschweiler', 'Franklin Gothic Bold', 'Arial Black', 'sans-serif';
+  margin: 0px 0px 0px 0px; 
+  padding-bottom: 3px;
+  color: white;
+}
+/*contenido*/
+/*Pagina Inicial*/
+.presentacion, .perfil{ padding-bottom: 14%; }
+.parrafo { 
+  text-align: justify; 
+  line-height: 1.5;
+}
+.btn { position: static; }
+#login-page { 
+  margin-bottom: 0px; 
+  padding-top: 5%;
+  padding-bottom: 60px;
+}
+.btn-login{ margin-bottom: 17px; }
+/*Tab del perfil*/
+#imgProfile {
+    width: 22%;
+    border-radius: 50%;
+    position: absolute;
+    padding: 2%;
+    margin: 5%;
+}
+.tipoUsuario { margin-bottom: 15px; }
+.btn-large i {font-size:  2rem; }
+.icon { font-size: 19px; }
+.card .card-action { border-top: 0px solid; }
+.card-reveal {
+  display: none; 
+  transform: translateY(0px);
+}
+@media only screen and (max-width: 400px){ #btn-Cancel-Edit-Profile, #btn-Save-Edit-Profile{ width: 100%; } }
+/*footer*/
+.main-footer{
+	  width: 100%;
+    left: 0;
+	  bottom:0;
+	  position: fixed;
+    color: #f2f2f2;
+	  padding: 3px;
+}

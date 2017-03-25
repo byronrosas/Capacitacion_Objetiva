@@ -1,0 +1,101 @@
+@charset "UTF-8";
+/* CSS Document */
+
+#cabecera {
+	width: 200px;
+	padding:10px;
+	padding-bottom: 5px;
+}
+#titulo{margin: 0px 0px 0px 0px;}
+.padding-10{padding:10px !important;}
+.fixed{
+	width: 100%;
+	position: fixed;
+}
+#main-header {
+    color: white;
+    height: 80px;
+    width: 100%;
+    left: 0;
+    top: 0;
+    position: fixed;
+}
+body {
+	padding: 0;
+	margin: 0;
+	font-family: Helvetica, Arial, sans-serif;
+	color: #666;
+	background: #f2f2f2; 
+	font-size: 1em;
+	line-height: 1.5em;	
+	/*padding-top: 120px;*/
+}
+#main-footer{
+	width: 100%;
+    left: 0;
+	bottom:0;
+    position: fixed;
+	color: #f2f2f2;
+	padding: 5px;
+}
+/*espacios entre el footer y el header*/
+#Perfil, #periodo, #carrera, #actividades, #usuario{
+	padding-top: 105px;
+	padding-bottom: 40px;
+}
+.boton-crear {
+	width: 100%;
+    left: 0;
+	bottom: 30px;
+	padding: 5px; 
+    position: fixed;
+}
+.datepicker {color: black;}
+#Enviar {margin-top: 40px;}
+.listaElementos{
+	margin-top: 0px;
+}
+.lista-with-hover:hover {
+	background-color: #a2d8a7;
+	color: #00000f;
+	-webkit-transition: .6s ease-out;
+	-moz-transition: .6s ease-out;
+	transition: .6s ease-out;
+}
+.Htres {
+	font-size: 1.46rem;
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+.Hcuatro {font-size: 0.90rem;}
+/*perfil*/
+.NameAdmin{
+	margin-bottom: 0px;
+	display: flex;
+  	align-items: center;
+}
+.btnEditPerfil{margin-top: 5px;}
+.DateBtnAdmin, .SubmitBtnAdmin{margin-bottom: 10px;}
+#EditImg{
+	float: left;
+	position: absolute;
+	margin-top: 63px;
+	margin-left: 63px;
+}
+.userimg{
+	float: left;
+}
+.userimg:hover{
+	background-color:black;
+   	opacity:0.5;
+}
+#btnEditar, #btnSave, #btnCancel{position: static;}
+/*periodo*/
+#periodo_name, #capital, #inicial, #final, #textarea{margin-bottom: 0px;}
+
+/*usuarios*/
+#nombre1_config, #nombre2_config, #apellido1_config, #apellido2_config, #descripcion_config, #area_config, #password_config, #cedula_config{margin-bottom: 0px;}
+#centrardiv{
+	display: flex;
+  	align-items: center;
+}
