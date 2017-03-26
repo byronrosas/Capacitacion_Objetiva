@@ -1,12 +1,13 @@
 import React from 'react';
 // import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
-import Header  from './header/header.react';
+import Header from './header/header.react';
 import Titulo_Inicio from './header/titulo.react';
 
-// import Usuario_Redisenio from './Usuarios/Jefe-Redisenio/menu.react';
-// import Usuario_Financiero from './Usuarios/Jefe-Financiero/menu.react';
-import Usuario_Director_Carrera from './Usuarios/Director-Carrera/menu.react';
+// import Usuario_Jefe_Redisenio from './Usuarios/Jefe-Redisenio/menu.react';
+// import Usuario_Jefe_Financiero from './Usuarios/Jefe-Financiero/menu.react';
+// import Usuario_Director_Carrera from './Usuarios/Director-Carrera/menu.react';
+import Usuario_Dep_Juridico from './Usuarios/Departamento-Juridico/menu.react';
 
 // import Body_Presentacion from './body/presentacion/body.react';
 // import Body_Login from './body/login/body.react';
@@ -20,9 +21,10 @@ export default class Layout extends React.Component {
             <div>
                 <Header />
                 <Titulo_Inicio/>
-                {/*<Usuario_Redisenio />*/}
-                {/*<Usuario_Financiero />*/}
-                <Usuario_Director_Carrera />
+                {/*<Usuario_Jefe_Redisenio />*/}
+                {/*<Usuario_Jefe_Financiero />*/}
+                {/*<Usuario_Director_Carrera />*/}
+                <Usuario_Dep_Juridico />
                 {/*<Router>
                     <div>
                         <Route exact path="/" component={Body_Presentacion}/>
