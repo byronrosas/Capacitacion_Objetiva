@@ -2,7 +2,7 @@ module.exports = {
     entry: './public/app.js',  //archivo de entrada, del que se va a migrar todas las funcionalidades
     output: {
         path: __dirname + '/public',
-        filename: 'bundle.js'
+        filename: 'bundle.js' 
     },
     module: {
         loaders: [

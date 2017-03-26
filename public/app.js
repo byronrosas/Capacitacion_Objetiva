@@ -5,6 +5,6 @@ import App from './componentes/pagina.inicio.react';
 
 ReactDOM.render(
     <App />,
-    document.getElementById('app')
+    document.getElementById('app') 
     // app de inicio.pu
 );

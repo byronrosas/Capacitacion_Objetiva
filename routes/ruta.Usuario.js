@@ -14,11 +14,11 @@ router.post('/register', (req, res, next) => {
         apellido1_usu:req.body.apellido1_usu,
         apellido2_usu:req.body.apellido2_usu,
         email:req.body.email,
-        username:req.body.username,
+        username:req.body.username,    
         password:req.body.password,
-        fechaNac_usu:req.body.fechaNac_usu,
+        fechaNac_usu:req.body.fechaNac_usu,    
         area_usu:req.body.area_usu,
-        rutaImagen_usu:req.body.rutaImagen_usu,
+        rutaImagen_usu:req.body.rutaImagen_usu, 
         estado_usu:req.body.estado_usu,
         disponibilidad_usu:req.body.disponibilidad_usu,
         //permisoArreglo
@@ -44,18 +44,20 @@ router.post('/authenticate', (req, res, next) => {
         if(!user) {
             return res.json({success:false,msg:'Usuario no Encontrado'});
         }
+
         User.comparePassword(password,user.password,(err,isMatch) => {
             console.log("err:+++"+err);
             if(err) throw err;
             if(isMatch) {
                 const token =jwt.sign(user,"capob");
+
                 res.json({
                     success:true,
-                    token:'JWT '+token,
+                    token:'JWT '+token,         
                     user:{
-                        _id:user._id,
-                        username:user.username
-                    }
+                        _id:user._id,            
+                        username:user.username            
+                    }        
                 });
             } else {
                 //No Match
@@ -66,19 +68,17 @@ router.post('/authenticate', (req, res, next) => {
 });
 
 /* GET users profile. */
-router.get("/secret", passport.authenticate('jwt', { session: false }), (req, res) => {
+router.get("/secret", passport.authenticate('jwt', { session: false }), function(req, res) {
     console.log(req);
     res.json({message: "Success! You can not see this without a token",e:"session:"+req.user.permisos_usu});
 });
-router.get("/secretDebug",
-    (req, res, next) => {
+router.get("/secretDebug", 
+    function(req, res, next) {
         console.log(req.get('Authorization'));
         next();
-    }, 
-    (req, res) => {
+    }, function(req, res) {
         res.json("debugging");
-    }
-);
+});
 // /* GET users validate. */
 // router.get('/validate', (req, res, next)=>{
 //   res.send('VALIDATE');
