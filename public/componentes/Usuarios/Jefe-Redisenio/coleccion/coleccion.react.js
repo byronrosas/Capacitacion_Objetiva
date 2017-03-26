@@ -7,12 +7,14 @@ export default class Coleccion extends React.Component {
         super(props);
     }
     render() {
-        let data = this.props.data;
+        let modal = this.props.modal;
+        let input = this.props.input;
+        let tab = this.props.tab;
         return (
             <li className="green-hover collection-item">
                 <div>
                     <span className="title">Title</span>
-                    <Modificar data={data}/>
+                    <Modificar modal={modal} input={input} tab={tab} />
                 </div>
                 <p>First Line <br/>
                     Second Line

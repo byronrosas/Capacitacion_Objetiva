@@ -1,4 +1,6 @@
 $(function(){
+    // reiniciar los labels materialize
+    Materialize.updateTextFields();
     // inicializacion de TABS
     $('ul.tabs').tabs();
   // Fin de tabs
