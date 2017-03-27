@@ -5,8 +5,14 @@ import Crear from '../modals/crear.react';
 
 export default class Proveedores extends React.Component {
     render() {
-        let crear_proveedor_modal = ['crear_proveedor_JR', '#crear_proveedor_JR','Proveedor'];
-        let modificar_proveedor_modal = ['modificar_proveedor_JR', '#modificar_proveedor_JR','Proveedor'];
+        // array de datos para crear curso
+        const crear_proveedor_modal = ['crear_proveedor_JR','#crear_proveedor_JR','Proveedor'];
+        const input_crear_proveedor = ['txt_Nombre_prov','txt_Pais_prov','txt_Ciudad_prov','txt_Direccion_prov','txt_Telefono_prov','txt_Observacion_prov'];
+        // array de datos para modificar curso
+        const modificar_proveedor_modal = ['modificar_proveedor_JR','#modificar_proveedor_JR','Proveedor'];
+        const input_modificar_proveedor = ['txt_Nombre_prov_edit','txt_Pais_prov_edit','txt_Ciudad_prov_edit','txt_Direccion_prov_edit','txt_Telefono_prov_edit','txt_Observacion_prov_edit'];
+        const tab = 2;
+        
         return (
             <div className="row coleccion">
                 <div className="col s1 m2 l2"></div>
@@ -14,8 +20,8 @@ export default class Proveedores extends React.Component {
                     {/*<ul></ul> crea la lista de elementos, cada elemento es un <li></li>*/}
                     <ul id="listar_proveedores_JR" className="collection with-header">
                         {/*en esta parte se debe hace la llamada a la DB para mostrar los datos*/}
-                        <Coleccion data={modificar_proveedor_modal} />
-                        <Coleccion data={modificar_proveedor_modal} />
+                        <Coleccion modal={modificar_proveedor_modal} input={input_modificar_proveedor} tab={tab} />
+                        <Coleccion modal={modificar_proveedor_modal} input={input_modificar_proveedor} tab={tab} />
                     </ul>
                 </div>
                 <div className="col s1 m1 l2"></div>
@@ -24,7 +30,7 @@ export default class Proveedores extends React.Component {
                         <i className="material-icons">add</i>
                     </a>
                 </div>
-                <Crear data={crear_proveedor_modal}/>
+                <Crear modal={crear_proveedor_modal} input={input_crear_proveedor} tab={tab} />
             </div>
         );
     }

@@ -5,8 +5,12 @@ import Crear from '../modals/crear.react';
 
 export default class Cursos extends React.Component {
     render() {
-        let crear_curso_modal = ['crear_curso_JR', '#crear_curso_JR','Curso'];
-        let modificar_curso_modal = ['modificar_curso_JR', '#modificar_curso_JR','Curso'];
+        const crear_curso_modal = ['crear_curso_JR', '#crear_curso_JR','Curso'];
+        const input_crear_curso = ['txt_Nombre_cur', 'txt_Area_cur', 'txt_Destreza_cur', 'txt_Observacion_cur'];
+        const modificar_curso_modal = ['modificar_curso_JR', '#modificar_curso_JR','Curso'];
+        const input_modificar_curso = ['txt_Nombre_cur_edit', 'txt_Area_cur_edit', 'txt_Destreza_cur_edit', 'txt_Observacion_cur_edit'];
+        const tab = 1;
+
         return (
             <div className="row coleccion">
                 <div className="col s1 m2 l2"></div>
@@ -14,8 +18,8 @@ export default class Cursos extends React.Component {
                     {/*<ul></ul> crea la lista de elementos, cada elemento es un <li></li>*/}
                     <ul id="listar_cursos_JR" className="collection with-header">
                         {/*en esta parte se debe hace la llamada a la DB para mostrar los datos*/}
-                        <Coleccion data={modificar_curso_modal} />
-                        <Coleccion data={modificar_curso_modal} />
+                        <Coleccion modal={modificar_curso_modal} input={input_modificar_curso} tab={tab} />
+                        <Coleccion modal={modificar_curso_modal} input={input_modificar_curso} tab={tab} />
                     </ul>
                 </div>
                 <div className="col s1 m1 l2"></div>
@@ -24,7 +28,7 @@ export default class Cursos extends React.Component {
                         <i className="material-icons">add</i>
                     </a>
                 </div>
-                <Crear data={crear_curso_modal}/>
+                <Crear modal={crear_curso_modal} input={input_crear_curso} tab={tab}/>
             </div>
         );
     }

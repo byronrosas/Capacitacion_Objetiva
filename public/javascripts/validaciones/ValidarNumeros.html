@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Validar Numero</title>
+
+<script language="javascript" src="validar_cedula.js"></script>
+<script language="javascript" src="validar_numeros.js"></script>
+<script language="javascript" src="validar_letras.js"></script>
+
+</head>
+<body>
+
+<H1>VALIDAR CAMPOS</H1>
+
+<HR>
+
+<form>
+	Número de Cédula: <input type="text" name="cedula" onKeyPress="return soloNumeros(event)" onchange="return validarCedula(this.form)" maxlength="10">
+	Validar solo Texto: <input type="text" name="teto" onkeypress="return soloLetras(event)">
+	Validar Numero telefonico: +593 <input type="text" name="telefono" onkeypress="return soloNumeros(event)" maxlength="9">
+	<!--<input type="submit" name="send" onclick="return validarCedula(this.form)" value="Validar">-->
+</form>
+
+</body>
+</html>
