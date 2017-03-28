@@ -1,8 +1,8 @@
 import React from 'react';
 
 import Button from './buttons/button.react';
-import Input_Cursos from './inputs/cursos/input.crear.react';
-import Input_Proveedores from './inputs/proveedores/input.crear.react';
+import Input_Cursos from './inputs/cursos/form.crear.react';
+import Input_Proveedores from './inputs/proveedores/form.crear.react';
 
 export default class Crear extends React.Component {
     constructor(props) {

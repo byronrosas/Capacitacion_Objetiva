@@ -6883,13 +6883,13 @@ var _button = __webpack_require__(54);
 
 var _button2 = _interopRequireDefault(_button);
 
-var _inputCrear = __webpack_require__(103);
+var _formCrear = __webpack_require__(103);
 
-var _inputCrear2 = _interopRequireDefault(_inputCrear);
+var _formCrear2 = _interopRequireDefault(_formCrear);
 
-var _inputCrear3 = __webpack_require__(105);
+var _formCrear3 = __webpack_require__(105);
 
-var _inputCrear4 = _interopRequireDefault(_inputCrear3);
+var _formCrear4 = _interopRequireDefault(_formCrear3);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -6917,9 +6917,9 @@ var Crear = function (_React$Component) {
             var resultado = null;
 
             if (tab == 1) {
-                resultado = _react2.default.createElement(_inputCrear2.default, { data: input });
+                resultado = _react2.default.createElement(_formCrear2.default, { data: input });
             } else if (tab == 2) {
-                resultado = _react2.default.createElement(_inputCrear4.default, { data: input });
+                resultado = _react2.default.createElement(_formCrear4.default, { data: input });
             }
 
             var name_div = modal[0];
@@ -21657,13 +21657,13 @@ var _button = __webpack_require__(54);
 
 var _button2 = _interopRequireDefault(_button);
 
-var _inputModificar = __webpack_require__(104);
+var _formModificar = __webpack_require__(104);
 
-var _inputModificar2 = _interopRequireDefault(_inputModificar);
+var _formModificar2 = _interopRequireDefault(_formModificar);
 
-var _inputModificar3 = __webpack_require__(106);
+var _formModificar3 = __webpack_require__(106);
 
-var _inputModificar4 = _interopRequireDefault(_inputModificar3);
+var _formModificar4 = _interopRequireDefault(_formModificar3);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -21691,9 +21691,9 @@ var Modificar = function (_React$Component) {
             var resultado = null;
 
             if (tab == 1) {
-                resultado = _react2.default.createElement(_inputModificar2.default, { data: input });
+                resultado = _react2.default.createElement(_formModificar2.default, { data: input });
             } else if (tab == 2) {
-                resultado = _react2.default.createElement(_inputModificar4.default, { data: input });
+                resultado = _react2.default.createElement(_formModificar4.default, { data: input });
             }
 
             var name_div = modal[0];

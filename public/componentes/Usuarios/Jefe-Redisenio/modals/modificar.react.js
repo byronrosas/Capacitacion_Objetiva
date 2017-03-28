@@ -1,8 +1,8 @@
 import React from 'react';
 
 import Button from './buttons/button.react';
-import Input_Cursos_Edit from './inputs/cursos/input.modificar.react';
-import Input_Proveedores_Edit from './inputs/proveedores/input.modificar.react';
+import Input_Cursos_Edit from './inputs/cursos/form.modificar.react';
+import Input_Proveedores_Edit from './inputs/proveedores/form.modificar.react';
 
 export default class Modificar extends React.Component {
     constructor(props) {

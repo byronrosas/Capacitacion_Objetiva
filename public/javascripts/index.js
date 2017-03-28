@@ -3,6 +3,7 @@ $(function(){
     Materialize.updateTextFields();
     // inicializacion de TABS
     $('ul.tabs').tabs();
+    // { swipeable: true, responsiveThreshold: Infinity });
   // Fin de tabs
   // inicializacion de MODALS
     $('.modal').modal();
