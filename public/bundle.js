@@ -21178,7 +21178,7 @@ var Menu_Tabs = function (_React$Component) {
                         { className: 'tabs green darken-4' },
                         _react2.default.createElement(
                             'li',
-                            { className: 'tab col s3' },
+                            { className: 'tab' },
                             _react2.default.createElement(
                                 'a',
                                 { href: '#perfil' },
@@ -21187,7 +21187,7 @@ var Menu_Tabs = function (_React$Component) {
                         ),
                         _react2.default.createElement(
                             'li',
-                            { className: 'tab col s3' },
+                            { className: 'tab' },
                             _react2.default.createElement(
                                 'a',
                                 { href: '#cursos' },
@@ -21196,7 +21196,7 @@ var Menu_Tabs = function (_React$Component) {
                         ),
                         _react2.default.createElement(
                             'li',
-                            { className: 'tab col s3' },
+                            { className: 'tab' },
                             _react2.default.createElement(
                                 'a',
                                 { href: '#proveedores' },

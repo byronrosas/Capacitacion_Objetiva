@@ -1,7 +1,25 @@
 /*css para el proyecto "Capacitacion Objetiva"*/
 body {
 	font: 14px "Lucida Grande", "Helvetica", "Arial", "sans-serif";
+	scrollbar-base-color: #C0C0C0;
+	scrollbar-base-color: #C0C0C0;
+	scrollbar-3dlight-color: #C0C0C0;
+	scrollbar-highlight-color: #C0C0C0;
+	scrollbar-track-color: #EBEBEB;
+	scrollbar-arrow-color: black;
+	scrollbar-shadow-color: #C0C0C0;
+	scrollbar-darkshadow-color: #C0C0C0;
 }
+::-webkit-scrollbar { width: 7px; height: 7px; }
+::-webkit-scrollbar-button { width: 0px; height: 0px; }
+::-webkit-scrollbar-thumb { background: #e1e1e1; border: 17px none #ffffff; border-radius: 50px; }
+::-webkit-scrollbar-thumb:hover { background: #ffffff; }
+::-webkit-scrollbar-thumb:active { background: #ffffff; }
+::-webkit-scrollbar-track { background: #1B5E20 ; border: 7px none #ffffff; border-radius: 50px; }
+::-webkit-scrollbar-track:hover { background: #1B5E20 ; }
+::-webkit-scrollbar-track:active { background: #1B5E20 ; }
+::-webkit-scrollbar-corner { background: transparent; }
+
 .row { margin-bottom: 0; }
 /*--------------------Loader----------------------*/
 .loaded #loader-wrapper .loader-section.section-left {

@@ -10,9 +10,9 @@ export default class Menu_Tabs extends React.Component {
             <div className="row">
                 <div className="col s12 green darken-4">
                     <ul className="tabs green darken-4">
-                        <li className="tab col s3"><a href="#perfil">Perfil</a></li>
-                        <li className="tab col s3"><a href="#cursos">Cursos</a></li>
-                        <li className="tab col s3"><a href="#proveedores">Proveedores</a></li>
+                        <li className="tab"><a href="#perfil">Perfil</a></li>
+                        <li className="tab"><a href="#cursos">Cursos</a></li>
+                        <li className="tab"><a href="#proveedores">Proveedores</a></li>
                     </ul>
                 </div>
                 <div id="perfil" className="col s12">
