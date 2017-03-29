@@ -114,10 +114,9 @@ body {
 @media only screen and (max-width: 330px){ .responsive-text { font-size: 1rem; } }
 /*--------texto responsivo-------*/
 /*header*/
-.cabecera { 
-	padding-top: 5px;
-	z-index: 5;
-}
+.cabecera { z-index: 5; }
+.nav-wrapper { height: 53px!important; }
+.img-fixed { padding-top: 10px; }
 .titulo{ 
 	font-family: 'Impact', 'Haettenschweiler', 'Franklin Gothic Bold', 'Arial Black', 'sans-serif';
 	margin: 0px 0px 0px 0px; 
