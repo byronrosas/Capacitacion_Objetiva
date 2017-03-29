@@ -114,7 +114,6 @@ body {
 @media only screen and (max-width: 330px){ .responsive-text { font-size: 1rem; } }
 /*--------texto responsivo-------*/
 /*header*/
-.cabecera { z-index: 5; }
 .nav-wrapper { height: 53px!important; }
 .img-fixed { padding-top: 10px; }
 .titulo{ 
@@ -122,6 +121,9 @@ body {
 	margin: 0px 0px 0px 0px; 
 	padding-bottom: 3px;
 	color: white;
+}
+.user-title {
+	    margin: 1.1rem 0 0.656rem 0;
 }
 /*contenido*/
 /*Pagina Inicial*/

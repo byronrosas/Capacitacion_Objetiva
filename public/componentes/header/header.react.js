@@ -6,38 +6,37 @@ export default class Header extends React.Component {
     }
     render () {
         let user = this.props.user;
-        let cabecera = 'left';
+        console.log(user);
+        let cabecera = 'left'
         let resultado = null;
         
         if(user != undefined) {
             resultado =
                 <nav className='nav nav-extended'>
                     <div className='nav-wrapper green darken-4 center'>
-                        <a className='cabecera left' href='#'>
-                            <img src='/images/logo-espe.png' width='180' alt='Logotipo' className='img-fixed'/>
-                        </a>
+                        <img src='/images/logo-espe.png' width='180' alt='Logotipo' className='img-fixed left'/>
                         <ul id='nav-mobile' className='right'>
-                            <li><a href='#'>FAQs</a></li>
-                            <li><a href='#'>Salir</a></li>
+                            <li><a href='#'>
+                                FAQs
+                                <i className='left material-icons'>help</i>
+                            </a></li>
+                            <li><a href='#'>
+                                Salir
+                                <i className='left material-icons'>input</i>
+                            </a></li>
                         </ul>
-                        <h5 className='right hide-on-med-and-down'>{user}</h5>
+                        <h5 className='user-title right hide-on-med-and-down animated flash infinite'>{user} &#160;</h5>
                     </div>
                 </nav>;
         } else if(user == undefined) {
             resultado =
                 <nav className='nav nav-extended'>
                     <div className='nav-wrapper green darken-4 center'>
-                        <a className='cabecera' href='#'>
-                            <img src='/images/logo-espe.png' width='180' alt='Logotipo' className='img-fixed'/>
-                        </a>
+                        <img src='/images/logo-espe.png' width='180' alt='Logotipo' className='img-fixed'/>
                     </div>
                 </nav>;
         }
-
-        return (
-            <div>
-                {resultado}
-            </div>
-        );
+        
+        return ( <div>{resultado}</div>);
     }
 }
