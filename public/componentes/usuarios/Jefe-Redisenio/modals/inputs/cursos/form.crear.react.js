@@ -6,6 +6,7 @@ export default class Input_Crear extends React.Component {
     constructor(props) {
         super(props);
     }
+    
     render() {
         let data = this.props.data;
         // id ------  div_class ------ name_label ------ input_class ------ maxLength

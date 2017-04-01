@@ -11,10 +11,13 @@ import Body_Login from './body/login/body.react';
 // pagina de perfil
 import Body_Perfil from './body/perfil/body.react';
 // usuarios
-import Usuario_Jefe_Redisenio from './usuarios/Jefe-Redisenio/menu.react';
-import Usuario_Jefe_Financiero from './usuarios/Jefe-Financiero/menu.react';
-import Usuario_Director_Carrera from './usuarios/Director-Carrera/menu.react';
+
 import Usuario_Dep_Juridico from './usuarios/Departamento-Juridico/menu.react';
+import Usuario_Director_Carrera from './usuarios/Director-Carrera/menu.react';
+import Usuario_Docente from './usuarios/Docente/menu.react';
+import Usuario_Jefe_Financiero from './usuarios/Jefe-Financiero/menu.react';
+import Usuario_Recursos_Humanos from './Usuarios/Jefe-Recursos-Humanos/menu.react';
+import Usuario_Jefe_Redisenio from './usuarios/Jefe-Redisenio/menu.react';
 // footer
 import Footer from './footer/footer.react';
 
@@ -51,7 +54,6 @@ export default class Layout extends React.Component {
                     <div>
                         <Header user='Docente' />
                         <Usuario_Docente />
-                        {/*falta crear*/}
                         <Footer />
                     </div>;
             } else if(permisos == 'JR' || permisos == '000010') {

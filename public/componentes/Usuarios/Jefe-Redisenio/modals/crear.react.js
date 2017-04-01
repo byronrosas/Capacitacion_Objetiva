@@ -5,35 +5,36 @@ import Input_Cursos from './inputs/cursos/form.crear.react';
 import Input_Proveedores from './inputs/proveedores/form.crear.react';
 
 export default class Crear extends React.Component {
-    constructor(props) {
-        super(props);
-    }
-    render() {
-        let modal = this.props.modal;
-        let input = this.props.input;
-        let tab = this.props.tab;
-        let resultado = null;
+	constructor(props) {
+		super(props);
+	}
+	render() {
+		let modal = this.props.modal;
+		let input = this.props.input;
+		let tab = this.props.tab;
+		let resultado = null;
 
-        if (tab == 1) { resultado = <Input_Cursos data={input}/>; }
-        else if(tab == 2) { resultado = <Input_Proveedores data={input}/>; }
+		if (tab == 1) { resultado = <Input_Cursos data={input}/>; }
+		else if(tab == 2) { resultado = <Input_Proveedores data={input}/>; }
 
-        const name_div = modal[0];
-        const div_ref = modal[1];
-        const title = modal[2];
-        const Guardar = ['Guardar', 'btn btn-flat waves-effect waves-light green darken-4 white-text', 'save'];
-        const Regresar = ['Regresar', 'modal-action modal-close waves-effect waves-green btn-flat', 'reply'];
+		const name_div = modal[0];
+		const div_ref = modal[1];
+		const title = modal[2];
+		const Guardar = ['Guardar', 'btn btn-flat waves-effect waves-light green darken-4 white-text', 'save', input[input.length - 1]];
+		const Regresar = ['Regresar', 'modal-action modal-close waves-effect waves-green btn-flat', 'reply', '0'];
 
-        return (
-            <div id={name_div} className="modal modal-fixed-footer">
-                <div className="modal-content">
-                    <h4 className='center'>Crear {title}</h4>
-                    {resultado}
-                </div>
-                <div className="modal-footer">
-                    <Button data={Guardar} />
-                    <Button data={Regresar} />
-                </div>
-            </div>
-        );
-    }
+		return (
+			<div id={name_div} className="modal modal-fixed-footer">
+				<div className="modal-content">
+					<h4 className='center hide-on-small-only'><b>Crear {title}</b></h4>
+					<h5 className='center hide-on-med-and-up'><b>Crear {title}</b></h5>
+					{resultado}
+				</div>
+				<div className="modal-footer">
+					<Button data={Guardar} />
+					<Button data={Regresar} />
+				</div>
+			</div>
+		);
+	}
 }

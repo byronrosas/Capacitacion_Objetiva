@@ -1,24 +1,15 @@
 /*css para el proyecto "Capacitacion Objetiva"*/
-body {
-	font: 14px "Lucida Grande", "Helvetica", "Arial", "sans-serif";
-	scrollbar-base-color: #C0C0C0;
-	scrollbar-base-color: #C0C0C0;
-	scrollbar-3dlight-color: #C0C0C0;
-	scrollbar-highlight-color: #C0C0C0;
-	scrollbar-track-color: #EBEBEB;
-	scrollbar-arrow-color: black;
-	scrollbar-shadow-color: #C0C0C0;
-	scrollbar-darkshadow-color: #C0C0C0;
-}
-::-webkit-scrollbar { width: 7px; height: 7px; }
+body { font: 14px "Lucida Grande", "Helvetica", "Arial", "sans-serif"; }
+/*-------------------scrollbar----------------------*/
+::-webkit-scrollbar { width: 0px; height: 0px; }
 ::-webkit-scrollbar-button { width: 0px; height: 0px; }
-::-webkit-scrollbar-thumb { background: #e1e1e1; border: 17px none #ffffff; border-radius: 50px; }
+/*::-webkit-scrollbar-thumb { background: #e1e1e1; border: 17px none #ffffff; border-radius: 50px; }
 ::-webkit-scrollbar-thumb:hover { background: #ffffff; }
 ::-webkit-scrollbar-thumb:active { background: #ffffff; }
 ::-webkit-scrollbar-track { background: #1B5E20 ; border: 7px none #ffffff; border-radius: 50px; }
 ::-webkit-scrollbar-track:hover { background: #1B5E20 ; }
 ::-webkit-scrollbar-track:active { background: #1B5E20 ; }
-::-webkit-scrollbar-corner { background: transparent; }
+::-webkit-scrollbar-corner { background: transparent; }*/
 
 .row { margin-bottom: 0; }
 /*--------------------Loader----------------------*/
@@ -100,7 +91,10 @@ body {
 @media only screen and (max-width: 690px){ .responsive-text { font-size: 1.518rem; } }
 @media only screen and (max-width: 660px){ .responsive-text { font-size: 1.490rem; } }
 @media only screen and (max-width: 630px){ .responsive-text { font-size: 1.462rem; } }
-@media only screen and (max-width: 600px){ .responsive-text { font-size: 1.434rem; } }
+@media only screen and (max-width: 600px){ 
+	.responsive-text { font-size: 1.434rem; }
+	.height-small-fixed { height: 56px; }
+}
 @media only screen and (max-width: 570px){ .responsive-text { font-size: 1.406rem; } }
 @media only screen and (max-width: 540px){ .responsive-text { font-size: 1.378rem; } }
 @media only screen and (max-width: 510px){ .responsive-text { font-size: 1.350rem; } }
@@ -123,7 +117,7 @@ body {
 	color: white;
 }
 .user-title {
-	    margin: 1.1rem 0 0.656rem 0;
+		margin: 1.1rem 0 0.656rem 0;
 }
 /*contenido*/
 /*Pagina Inicial*/
@@ -161,12 +155,6 @@ body {
 @media only screen and (max-width: 400px){ #btn-Cancel-Edit-Profile, #btn-Save-Edit-Profile{ width: 100%; } }
 @media only screen and (max-width: 455px){ #btn-Cancel-Edit-Profile, #btn-Save-Edit-Profile{ width: 100%; } }
 @media only screen and (max-width: 435px){ 
-	.btn-floating.btn-large {
-	width: 40px;
-	height: 40px;
-	}
-	.btn-floating i { font-size: 1.6rem; }
-	.btn-floating.btn-large i { line-height: 40px; }
 	#imgProfile {
 		width: 35%;
 		margin-top: 5%;
@@ -177,32 +165,6 @@ body {
 .coleccion {
 	padding-top: 3%;
 }
-@media only screen and (min-width: 0px){ 
-	.boton-crear {
-		width: 100%;
-		left: 0;
-		bottom: 30px;
-		padding: 5px;
-		position: fixed;
-	}
-	.fixed-button { left: 93%; }
-}
-@media only screen and (max-width: 900px){ .fixed-button { left: 89%; }}
-@media only screen and (max-width: 700px){ .fixed-button { left: 85%; }}
-@media only screen and (max-width: 600px){ .fixed-button { left: 83%; }}
-@media only screen and (max-width: 550px){ 
-	.fixed-button { left: 82%; }
-	.btn-flat {
-		padding-left: 10px;
-		padding-right: 10px;
-	}
-}
-@media only screen and (max-width: 530px){ .fixed-button { left: 87%; }}
-@media only screen and (max-width: 400px){ .fixed-button { left: 84%; }}
-@media only screen and (max-width: 350px){ .fixed-button { left: 81%; }}
-@media only screen and (max-width: 660px){ .fixed-button { bottom: 25px; }}
-@media only screen and (max-width: 530px){ .fixed-button { bottom: 10px; }}
-@media only screen and (max-width: 355px){ .fixed-button { bottom: 35px; }}
 .green-hover:hover {
 	background-color: #a2d8a7;
 	color: #00000f;
@@ -242,20 +204,20 @@ body {
 }
 /*estilos para la calificacion por estrellas*/
 .rating:not(:checked) > input {
-    /*position:absolute;*/
-    /*top:-9999px;*/
-    clip:rect(0,0,0,0);
+	/*position:absolute;*/
+	/*top:-9999px;*/
+	clip:rect(0,0,0,0);
 }
 .rating:not(:checked) > label {
-    float: right;
-    width: 1em;
-    padding: 0 .1em;
-    overflow: hidden;
-    white-space: nowrap;
-    cursor: pointer;
-    font-size: 200%;
-    line-height: 1.2;
-    color: #ddd;
+	float: right;
+	width: 1em;
+	padding: 0 .1em;
+	overflow: hidden;
+	white-space: nowrap;
+	cursor: pointer;
+	font-size: 200%;
+	line-height: 1.2;
+	color: #ddd;
 }
 .rating > input:checked ~ label { color: #1B5E20; }
 .rating:not(:checked) > label:hover, .rating:not(:checked) > label:hover ~ label { color: #1B5E20; }
@@ -280,6 +242,12 @@ body {
 	border: 0px solid transparent;
 }
 [type="radio"]:not(:checked) + label, [type="radio"]:checked + label {
-    padding-left: 0px;
+	padding-left: 0px;
 	font-size: 2rem;
+}
+
+.fixed-action-btn { bottom: 50px; }
+
+.collection-text {
+	padding: 7px 0px 7px 0px !important;
 }

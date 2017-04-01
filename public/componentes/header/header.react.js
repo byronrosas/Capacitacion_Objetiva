@@ -16,12 +16,12 @@ export default class Header extends React.Component {
                     <div className='nav-wrapper green darken-4 center'>
                         <img src='/images/logo-espe.png' width='180' alt='Logotipo' className='img-fixed left'/>
                         <ul id='nav-mobile' className='right'>
-                            <li><a href='#'>
-                                FAQs
+                            <li><a href='#' className='height-small-fixed'>
+                                <span className='hide-on-small-only'>FAQs</span>
                                 <i className='left material-icons'>help</i>
                             </a></li>
-                            <li><a href='#'>
-                                Salir
+                            <li><a href='#' className='height-small-fixed'>
+                                <span className='hide-on-small-only'>Salir</span>
                                 <i className='left material-icons'>input</i>
                             </a></li>
                         </ul>

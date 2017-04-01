@@ -6,7 +6,7 @@ var equipoSchema = new Schema({
     //array de destrezas
     destrezas_cur:[String],
     //archivoPDF_cur:String,
-     observacion_cur:String	
+     observacion_cur:String
 });
 //crear el modelo dentro de la base de datos
 var equipoModel = mongoose.model('CURSO',equipoSchema);
