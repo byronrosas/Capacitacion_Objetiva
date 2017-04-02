@@ -106,7 +106,7 @@ exports.listarParaDocente = function(req,res,next) {
         {
             res.json({codigo:404, msg:"No hay cursos para seleccionar."});
         }else{
-            Usuario.find({},(err,dataUsuario)=>{                                                                                  
+            // Usuario.find({},(err,dataUsuario)=>{                                                                                  
                     dataDC.forEach((itemDC)=>{                    
                         var vect=Utils.filtrarCurso(itemDC.codigo_cur.destrezas_cur,req.user.destrezas_usu);
                         if(vect.length!=0)
@@ -115,7 +115,13 @@ exports.listarParaDocente = function(req,res,next) {
                         }                                                                
                     });
                 
-            }); 
+            // }); 
+            if(coincidenciasCursos.length==0)
+            {
+                res.json({codigo:404, msg:"No existen coincidencias de destrezas con los cursos."});
+            }else{
+                res.json({codigo:200, msg:"Listado de coincidencias (Cursos disponibles de acuerdo a sus destrezas).",data:coincidenciasCursos});
+            }            
         }                    
     });    
 }
