@@ -111,7 +111,7 @@ exports.listarParaDocente = function(req,res,next) {
                         var vect=Utils.filtrarCurso(itemDC.codigo_cur.destrezas_cur,req.user.destrezas_usu);
                         if(vect.length!=0)
                         {
-                                coincidenciasCursos.push(vect);
+                                coincidenciasCursos.push(itemDC.codigo_cur);
                         }                                                                
                     });
                 
