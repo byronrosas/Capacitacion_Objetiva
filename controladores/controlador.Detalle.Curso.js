@@ -4,6 +4,8 @@ var DetalleCurso = require('../modelos/modelo.Detalle.Curso.js');
 var Proveedor = require('../modelos/modelo.Proveedor.js');
 var Curso = require('../modelos/modelo.Curso.js');
 var Periodo = require('../modelos/modelo.Periodo.js');
+var Usuario = require('../modelos/modelo.Usuario.js');
+var Utils=require('../utils/utils');
 
 exports.crear = function(req,res,next) {
     var nuevoDetalleCurso=new DetalleCurso(req.body);
@@ -97,12 +99,25 @@ exports.listar = function(req,res,next) {
 }
 
 exports.listarParaDocente = function(req,res,next) {
-    var destrezas = [];
-    var cursos = [];
-    var vect = [];
-    DetalleCurso.find({$and:[{aprobacionDC_dc:true},{aprobacionJF_dc:true},{archivoPDF_dc:/null/}]},(err,data) => {
-        // que ha pasado aqui falta algo
-    });
+    var coincidenciasCursos=[];    
+    DetalleCurso.find({$and:[{aprobacionDC_dc:true},{aprobacionJF_dc:true},{archivoPDF_dc:{$ne:null}}]}).populate('codigo_cur').exec((err,dataDC) => {
+        //
+        if(dataDC.length!=0)
+        {
+            res.json({codigo:404, msg:"No hay cursos para seleccionar."});
+        }else{
+            Usuario.find({},(err,dataUsuario)=>{                                                                                  
+                    dataDC.forEach((itemDC)=>{                    
+                        var vect=Utils.filtrarCurso(itemDC.codigo_cur.destrezas_cur,req.user.destrezas_usu);
+                        if(vect.length!=0)
+                        {
+                                coincidenciasCursos.push(vect);
+                        }                                                                
+                    });
+                
+            }); 
+        }                    
+    });    
 }
 
 exports.aprobarDC = function(req,res,next) {

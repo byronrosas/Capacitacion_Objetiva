@@ -2,6 +2,8 @@ var mongoose = require('mongoose');
 
 var Contrato = require('../modelos/modelo.Contrato');
 var Carrera = require('../modelos/modelo.Carrera');
+var Carrera = require('../modelos/modelo.Usuario.js');
+var Carrera = require('../modelos/modelo.Detalle.Curso.js');
 
 exports.crear = function(req,res,next) {
     var nuevoContrato = new Contrato(req.body);

@@ -43,7 +43,7 @@ router.put('/desaprobardc/:_id', passport.authenticate('jwt', { session: false }
 router.put('/subir/:_id', passport.authenticate('jwt', { session: false }), (req,res,next) => {
   controladorDetalleCurso.subirPDF(req,res,next);
 });
-
+//Añadir la funcion de passport
 router.get('/listarParaDocente/', passport.authenticate('jwt', { session: false }), (req,res,next) => {
     controladorDetalleCurso.listarParaDocente(req,res,next);
 });
